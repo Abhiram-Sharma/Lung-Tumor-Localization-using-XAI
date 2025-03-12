@@ -75,3 +75,11 @@ torchxrayvision
 pytorch-grad-cam
 Pillow
 scikit-image
+streamlit
+numpy
+torch
+torchxrayvision
+pytorch-grad-cam
+Pillow
+scikit-image
+opencv-python

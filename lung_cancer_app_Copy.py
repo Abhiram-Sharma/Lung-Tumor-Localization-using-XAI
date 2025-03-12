@@ -1,3 +1,35 @@
+import subprocess
+import sys
+
+libraries = [
+    "streamlit",
+    "numpy",
+    "torch",
+    "torchxrayvision",
+    "pytorch-grad-cam",
+    "Pillow",
+    "scikit-image"
+]
+
+for library in libraries:
+    try:
+        __import__(library)
+        print(f"{library} is already installed.")
+    except ImportError:
+        print(f"Installing {library}...")
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", library])
+            print(f"{library} installed successfully.")
+            try:
+                __import__(library)
+                print(f"{library} import verified after install")
+            except ImportError:
+                print(f"Error: Unable to import {library} after installation. Please check your installation.")
+        except subprocess.CalledProcessError as e:
+            print(f"Error installing {library}: {e}")
+        except Exception as e:
+            print(f"An unexpected error occurred during installation of {library}: {e}")
+            
 import streamlit as st
 import numpy as np
 import torch

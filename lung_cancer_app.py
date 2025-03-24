@@ -205,8 +205,8 @@ if uploaded_file is not None:
 st.header("Authors")
 st.markdown("Meet the researchers behind this study (demonstration placeholders).")
 authors = [
-    {"name": "Dr. Alice Smith", "bio": "Expert in medical imaging and AI.", "photo": "https://via.placeholder.com/250"},
-    {"name": "Dr. Bob Johnson", "bio": "Specialist in deep learning applications.", "photo": "https://via.placeholder.com/250"}
+    {"name": "Abhiram Sharma", "bio": "Expert in medical imaging and AI.", "photo": "https://github.com/Abhiram-Sharma/Lung-Tumor-Localization-using-XAI/blob/main/img1.png?raw=true"},
+    {"name": "Krishna Priyadarshan Behara", "bio": "Specialist in deep learning applications.", "photo": "https://github.com/Abhiram-Sharma/Lung-Tumor-Localization-using-XAI/blob/main/img2.jpg?raw=true"}
 ]
 cols = st.columns(len(authors))
 for col, author in zip(cols, authors):
@@ -229,12 +229,12 @@ for col, author in zip(cols, authors):
 # --- Research Paper Section ---
 st.header("Research Paper")
 st.markdown("Download a sample research paper for demonstration purposes.")
-sample_pdf_url = "/assets/paper.pdf"
+sample_pdf_url = "https://github.com/Abhiram-Sharma/Lung-Tumor-Localization-using-XAI/blob/main/246%20-%20Complete%20manuscript%20-%2012%20pages%20Updated.pdf"
 response = requests.get(sample_pdf_url)
 st.download_button(
-    label="Download Sample Research Paper",
+    label="Download Research Paper",
     data=response.content,
-    file_name="sample_research_paper.pdf",
+    file_name="Lung-Tumor-Localization-using-XAI.pdf",
     mime="application/pdf"
 )
 
@@ -242,8 +242,8 @@ st.download_button(
 st.markdown("""
 ---
 **Contact Us**  
-Email: research.team@example.com  
+Email: ab23.ar39@gmail.com  
 
 **Portfolio**  
-[GitHub](https://github.com) | [LinkedIn](https://linkedin.com)
+[GitHub](https://github.com/Abhiram-Sharma) | [LinkedIn](https://www.linkedin.com/in/abhiram-sharma/)
 """)
